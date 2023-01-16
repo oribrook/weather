@@ -1,4 +1,4 @@
-api_key = "a9416531306ab7444be40400827a9ef3"
+api_key = "a9416531306ab7444be40400827a9ef3" // todo: move it to env var
 
 async function refresh() {
         
