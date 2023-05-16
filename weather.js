@@ -55,7 +55,7 @@ function getCookie(name) {
 
 function setShowDark() {
     // show dark-mode toggle only on production
-    if (! window.location.pathname.includes("github.io")) {
+    if (! window.location.href.includes("github.io")) {
         elem = document.getElementById("dark-mode")
         elem.style.visibility = "hidden"
     } else {
