@@ -9,13 +9,12 @@ async function refresh() {
         city = cities[i]
         url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`
         // res = await fetch(url)        
-        res = await axios.get(url)
-        resJ = await res.json()            
+        // resJ = await res.json()
+        resJ = await axios.get(url)
+        
         currentTemp = resJ.main.temp - 273.15;        
         currentTemp = currentTemp.toFixed(0);
-        document.getElementById(city).innerHTML = currentTemp;
-        
-        // forcast(city);
+        document.getElementById(city).innerHTML = currentTemp;                
     }
        
 } 
@@ -33,7 +32,7 @@ function forcast(city) {
 }
 
 function toggleTheme() {
-    // change body.background based on cookie existence
+    // change body.background based on cookie existence    
 
     if (getCookie("darkMode")) {
         // delete cookie

@@ -23,6 +23,9 @@
     style="background-color: rgb(139, 199, 194)"
     onload="toggleTheme();toggleTheme()"
   >
+  <div style="text-align: left;">
+    <button  class="btn btn-secondary" style="width: 10%;" onclick="toggleTheme()"> Dark </button>
+  </div>
     <div style="display: flex; flex-direction: column; height: 100%">
       <div class="heder">
         <p style="padding-top: 5%">מזג אוויר בערים נבחרות</p>
@@ -51,9 +54,7 @@
 
       <div style="text-align: center">
         <button class="btn btn-primary" onclick="refresh()">refresh</button>
-      </div>
-
-      <button onclick="toggleTheme()">Change Dark Mode</button>
+      </div>      
     </div>
   </body>
 </html>
