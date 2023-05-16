@@ -8,9 +8,8 @@ async function refresh() {
         console.log(i)
         city = cities[i]
         url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`
-        // res = await fetch(url)        
-        // resJ = await res.json()
-        resJ = await axios.get(url)
+        res = await fetch(url)        
+        resJ = await res.json()        
         
         currentTemp = resJ.main.temp - 273.15;        
         currentTemp = currentTemp.toFixed(0);
@@ -53,3 +52,16 @@ function getCookie(name) {
     if (parts.length === 2) return parts.pop().split(";").shift();
   }
   
+
+function setShowDark() {
+    // show dark-mode toggle only on production
+    if (! window.location.pathname.includes("github.io")) {
+        elem = document.getElementById("dark-mode")
+        elem.style.visibility = "hidden"
+    } else {
+        
+        // double click for create cookie
+        toggleTheme();
+        toggleTheme();
+    }
+}
