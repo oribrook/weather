@@ -8,7 +8,8 @@ async function refresh() {
         console.log(i)
         city = cities[i]
         url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${api_key}`
-        res = await fetch(url)
+        // res = await fetch(url)        
+        res = await axios.get(url)
         resJ = await res.json()            
         currentTemp = resJ.main.temp - 273.15;        
         currentTemp = currentTemp.toFixed(0);
