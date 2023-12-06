@@ -9,4 +9,5 @@ jobs:
       - name: "ORI STEP"
         run: |
           echo hi
+          python ttd.py
           ls -a    
